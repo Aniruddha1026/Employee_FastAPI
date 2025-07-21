@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>employee</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+        <link rel="stylesheet" href="/static/employee.css" />
+    </head>
+    <body>
+        <button id="toggle-form">+ Add Employee</button>
+        <button id="logout-button" style="background-color: #e74c3c; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">
+            Logout
+        </button>
+        <div id="employee-form" style="display: none; margin-top: 20px;">
+            <h3>Add New Employee</h3>
+            <form id="add-employee-form">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" placeholder="First Name" required />
+
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" placeholder="Last Name" />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email" required />
+
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" placeholder="Phone" required />
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" placeholder="DOB" required />
+
+                <label for="joining_date">Joining Date</label>
+                <input type="date" id="joining_date" placeholder="Joining Date" required />
+
+                <label for="Department">Department</label>
+                <input type="text" id="department" placeholder="Department" required />
+
+                <label for="position">Position</label>
+                <input type="text" id="position" placeholder="Position" required />
+
+                <label for="salary">Salary</label>
+                <input type="number" step="0.01" id="salary" placeholder="Salary" required />
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="add-error" style="color:red;"></p>
+        </div>
+        <div id="update-form">
+            <form id="update-employee-form">
+                <label for="update-id">Employee ID</label>
+                <input type="number" id="update-id" name="id" required>
+
+                <label for="update-first_name">First Name</label>
+                <input type="text" id="update-first-name" name="first_name" required>
+
+                <label for="update-last_name">Last Name</label>
+                <input type="text" id="update-last-name" name="last_name">
+
+                <label for="update-email">Email</label>
+                <input type="email" id="update-email" name="email" required>
+
+                <label for="update-phone">Phone</label>
+                <input type="text" id="update-phone" name="phone" required>
+
+                <label for="update-dob">Date of Birth</label>
+                <input type="date" id="update-dob" name="dob" required>
+
+                <label for="update-joining_date">Joining Date</label>
+                <input type="date" id="update-joining-date" name="joining_date" required>
+
+                <label for="update-department">Department</label>
+                <input type="text" id="update-department" name="department" required>
+
+                <label for="update-position">Position</label>
+                <input type="text" id="update-position" name="position" required>
+
+                <label for="update-salary">Salary</label>
+                <input type="number" id="update-salary" name="salary" required>
+
+                <button type="submit">Update Employee</button>
+                <p id="update-error"></p>
+            </form>
+        </div>
+
+
+        <div class="container">
+            <h2>Employee List</h2>
+            <div style="margin-bottom: 20px;">
+            <input type="text" id="search-input" placeholder="Search by name or email" />
+            <select id="department-filter">
+                <option value="">All Departments</option>
+                <option value="HR">HR</option>
+                <option value="IT">IT</option>
+                <option value="Sales">Sales</option>
+            </select>
+            <select id="position-filter">
+                <option value="">All Positions</option>
+                <option value="Manager">Manager</option>
+                <option value="Developer">Developer</option>
+                <option value="Intern">Intern</option>
+            </select>
+            <input type="number" id="id-search" placeholder="Search by ID" />
+            <button id="filter-button">Search</button>
+        </div>
+            <table border="1" id="employee-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>DOB</th>
+                        <th>Joining Date</th>
+                        <th>Department</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                        <th>Operations</th>
+                    </tr>
+                </thead>
+                <tbody id="employee-body">
+                </tbody>
+            </table>
+            <p id="error-message" style="color: red;"></p>
+        </div>
+        <script src="/static/employee.js"></script>
+    </body>
+</html>

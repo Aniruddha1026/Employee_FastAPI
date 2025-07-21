@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <link rel="stylesheet" href="/static/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h2 style="text-align: center;">Register</h2>
+            <form id="register-form">
+                <label for="email">Email</label><br>
+                <input name="email" type="email" placeholder="Enter your Email" id="email" required /><br>
+                <label for="password">Password</label><br>
+                <input name="password" type="password" placeholder="Enter your Password" id="password" required />
+                <button type="submit">Register</button>
+            </form><br>
+            <div style="text-align: center;"><a href="/login">Back to Login</a></div>
+        </div>
+        <p id="error-message" style="color: red; text-align: center;"></p>
+        <script src="/static/register.js"></script>
+    </body>
+</html>
